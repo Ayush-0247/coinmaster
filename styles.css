@@ -1,0 +1,942 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    line-height: 1.6;
+    transition: background-color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Logo Styling */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    height: 100px;
+}
+
+.logo-img {
+    width: 100px;
+    height: auto;
+    margin-right: 1em;
+    transition: transform 0.1s ease-in-out;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5em;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav {
+    display: flex;
+    gap: 2em;
+}
+
+.nav a {
+    color: #333333;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+    color: #666666;
+}
+
+
+
+
+
+
+
+/* About Section */
+.about-section {
+    background: linear-gradient(135deg, #f7f7f7, #e0e0e0);
+    color: #333333;
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    margin: 2rem auto;
+    max-width: 900px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.about-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-text p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #f7f7f7;
+    color: #333333;
+    padding: 2em 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1.1em;
+}
+
+footer a {
+    color: #333333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #666666;
+}
+
+/* Button Styling */
+button {
+    background-color: #e0e0e0;
+    color: #333333;
+    padding: 1em 2em;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #cccccc;
+}
+
+/* Team Section Styling */
+.team-section {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.team-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.team-member {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+.team-member p {
+    color: #777;
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.team-member .bio {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Hover Effects for Team Section */
+.team-member:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.team-member:hover img {
+    transform: scale(1.1);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .team-section h1 {
+        font-size: 2rem;
+    }
+    .hero-section {
+        grid-template-columns: 1fr;
+    }
+    .text-content {
+        text-align: center;
+        padding: 20px;
+    }
+    .image-container img {
+        max-width: 80%;
+    }
+}
+
+
+
+
+
+
+
+/* KYC Section */
+h1 {
+    text-align: center;
+    font-size: 3rem; /* Increase font size */
+    margin-bottom: 20px; /* Add space between the title and the image */
+}
+
+/* Container centering */
+.container {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    padding: 20px; /* Optional: Add some padding for spacing inside the container */
+    background-color: #f7f7f7; /* Background color */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Add some shadow effect */
+    margin: 0 auto; /* Center the container horizontally in the page */
+    width: auto; /* Ensure the container width adjusts based on the image */
+    text-align: center; /* Center text if needed */
+}
+
+/* Image styling */
+.container img {
+    width: 100%; 
+    max-width: 1200px; 
+    height: auto; 
+    border-radius: 10px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Hero Section */
+.hero-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    height: 100vh;
+    background-color: #ffffff;
+    color: #333333;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.text-content {
+    max-width: 600px;
+    padding: 50px;
+}
+
+.text-content h1 {
+    font-size: 4em;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 1em;
+    line-height: 1.2;
+}
+
+.text-content h2 {
+    font-size: 1.5em;
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+#coming-soon-btn {
+    padding: 15px 30px;
+    font-size: 22px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+#coming-soon-btn:hover {
+    background-color: #ffcc00;
+}
+
+/* Flash Message */
+.flash-message {
+    display: none;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ffcc00;
+    color: #333333;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 5px;
+    animation: flash 1s ease-out;
+}
+
+/* Flash Animation */
+@keyframes flash {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+
+
+
+
+
+
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+    margin: 20px;
+    max-width: 200px;
+}
+
+.team-member-image {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px; /* Adds spacing between the team member boxes */
+}
+
+.team-member {
+    text-align: center;
+    margin: 20px;
+    padding: 20px; /* Adds padding inside the box */
+    max-width: 300px; /* Adjust the width of the box */
+    background-color: #f9f9f9; /* Light background for the box */
+    border-radius: 15px; /* Rounded corners for the box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    transition: transform 0.3s ease-in-out; /* Smooth hover animation */
+}
+
+.team-member:hover {
+    transform: scale(1.05); /* Slightly enlarges the box on hover */
+}
+
+.team-member-image {
+    width: 150px; /* Increased size of the image */
+    height: 150px; /* Maintain a square ratio */
+    border-radius: 50%; /* Keeps the image circular */
+    margin-bottom: 15px; /* Spacing between the image and text */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow around the image */
+}
+
+.team-member h3 {
+    font-size: 20px; /* Larger font size for the name */
+    margin-bottom: 5px; /* Adds space between the name and role */
+    color: #2d3a5f;
+}
+
+.team-member p {
+    font-size: 16px; /* Slightly larger text for the introduction */
+    color: #666;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+/* Newsletter section styling */
+.newsletter-section {
+    background: linear-gradient(to right, #625851, #896576); /* Gradient background */
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px; /* Adds space around the content */
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    max-width: 900px;
+    margin: 60px auto;
+}
+
+.newsletter-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.newsletter-section p {
+    font-size: 1.2em;
+    color: #fff;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Form styling */
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.newsletter-form input {
+    padding: 15px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 30px;
+    width: 70%;
+    max-width: 300px;
+    outline: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.newsletter-form input:focus {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.subscribe-button {
+    padding: 15px 30px;
+    font-size: 1.1em;
+    background-color: #1f2e30;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.subscribe-button:hover {
+    background-color: #d3e01a;
+    transform: scale(1.05);
+}
+
+.subscribe-button:active {
+    transform: scale(1);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .newsletter-section {
+        padding: 60px 20px;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-form input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .subscribe-button {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Heading Styling */
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #2c3e50;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #ff6a00;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Container Styling */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Image Styling with Reduced Size */
+.image {
+    width: 10%; /* Adjusts the width to 50% of the container */
+    max-width: 10px; /* Maximum size for the image */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.image:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Heading Styling */
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin: 40px 0 20px;
+    text-transform: uppercase;
+    color: #2c3e50;
+    position: relative;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #ff6a00;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Container Styling */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 1200px; /* Sets a maximum width for consistency */
+    text-align: center;
+}
+
+/* Image Styling */
+.container img {
+    width: 100%; /* Ensures the image scales within its container */
+    max-width: 600px; /* Limits the maximum image width */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Image */
+.container img:hover {
+    transform: scale(1.05); /* Zooms slightly on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .container img {
+        max-width: 100%; /* Ensures the image scales for smaller screens */
+    }
+}
+
+
+
+
+
+
+/* Basic Reset */
+body, ul, li, a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Main Menu Styling */
+  .main-menu {
+    background-color: #333;
+    padding: 0.5em 0;
+  }
+  
+  .main-menu ul {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .main-menu li {
+    margin: 0 1em;
+  }
+  
+  .main-menu a {
+    color: white;
+    font-size: 1.2em;
+    transition: color 0.3s;
+  }
+  
+  .main-menu a:hover {
+    color: #00bcd4;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+.hero-section .image-container img {
+    width: 100%; /* Makes images responsive to container size */
+    max-width: 500px; /* Limits the maximum size */
+    height: auto; 
+    /* Maintains aspect ratio */
+}
+
+/* If you want to set individual sizes for each image */
+.hero-section .image-container img:nth-child(1) {
+    width: auto; /* Adjust the width of the first image */
+    height: 550px;
+}
+
+.hero-section .image-container img:nth-child(2) {
+    width: auto; /* Adjust the width of the second image */
+    height: 550px;
+}
+
+.image-container img {
+    margin-right: 20px; /* Adds space between images */
+}
+
+
+
+
+
+
+
+
+
+.logo span {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2em; 
+    font-weight: bold; 
+    color: #333; 
+}
+
+
+
+
+
+.hero-section h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;/* Replace 'Arial' with your desired font */
+    font-size: 4em; /* Adjust the size as needed */
+    font-weight: bold; /* Optional: makes the font bold */
+    color: #333; /* Optional: changes text color */
+}
+
+.hero-section h2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Replace 'Roboto' with your desired font */
+    font-size: 1.5em; /* Adjust the size */
+    color: #666; /* Optional: changes text color */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer container styling */
+footer {
+    background-color: #333; /* Dark background for the footer */
+    color: #fff; /* White text */
+    padding: 40px 20px; /* Padding for spacing around content */
+    text-align: center; /* Center align text */
+}
+
+/* Footer links styling */
+.footer-container {
+    max-width: 1200px; /* Limit the width */
+    margin: 0 auto; /* Center the container */
+}
+
+/* Social links section styling */
+.social-links {
+    margin-bottom: 20px; /* Space below the social links */
+}
+
+.social-icon {
+    font-size: 1.2em; /* Increase icon size */
+    color: #fff; /* White color for icons */
+    margin: 0 15px; /* Horizontal space between social icons */
+    text-decoration: none; /* Remove underline from links */
+    display: inline-block; /* Ensure they align horizontally */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.social-icon i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+/* Social icon hover effect */
+.social-icon:hover {
+    color: #1da1f2; /* Change to blue (Twitter's brand color) on hover */
+}
+
+.social-icon:nth-child(2):hover {
+    color: #3b5998; /* Facebook blue on hover */
+}
+
+.social-icon:nth-child(3):hover {
+    color: #0077b5; /* LinkedIn blue on hover */
+}
+
+/* Footer text styling */
+footer p {
+    font-size: 1em; /* Standard font size for copyright text */
+    color: #ccc; /* Slightly lighter color for the text */
+    margin-top: 20px; /* Space above copyright text */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Position the auth buttons at the top right */
+.auth-buttons {
+    position: absolute; /* Positioning relative to the nearest positioned ancestor */
+    top: 20px; /* Distance from the top of the page */
+    right: 20px; /* Distance from the right edge of the page */
+    font-family: 'Arial', sans-serif; /* Choose a suitable font */
+    display: flex; /* Align buttons horizontally */
+    align-items: center; /* Align buttons vertically */
+    gap: 10px; /* Space between the buttons */
+}
+
+/* Style the individual auth buttons */
+.auth-btn {
+    text-decoration: none; /* Remove underlines from links */
+    color: #000; /* Black text color */
+    background-color: #ffcc00; /* Yellow background */
+    padding: 12px 24px; /* Padding around text */
+    border-radius: 30px; /* Rounded corners */
+    font-size: 1.1em; /* Text size */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    opacity: 0; /* Start with 0 opacity for animation */
+    animation: fadeIn 1s forwards; /* Add fade-in animation */
+}
+
+/* Hover effect for buttons */
+.auth-btn:hover {
+    background-color: #fbbd00; /* Darker yellow on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Add shadow effect on hover */
+}
+
+/* Animation for the buttons to fade in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Optional: Add responsive design for small screens */
+@media screen and (max-width: 768px) {
+    .auth-buttons {
+        top: 10px; /* Adjust top space for smaller screens */
+        right: 10px; /* Adjust right space for smaller screens */
+    }
+
+    .auth-btn {
+        font-size: 0.9em; /* Smaller font size on mobile */
+    }
+}
+
+
