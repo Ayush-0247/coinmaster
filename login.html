@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Sign Up</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .auth-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            width: 400px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .auth-container:before {
+            content: "";
+            position: absolute;
+            top: -60%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, #fff, #000);
+            width: 200%;
+            height: 300%;
+            animation: gradientAnimation 4s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                transform: translateX(-50%) translateY(-50%);
+            }
+            100% {
+                transform: translateX(50%) translateY(50%);
+            }
+        }
+
+        h2 {
+            font-size: 30px;
+            margin-bottom: 30px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: #fff;
+        }
+
+        .auth-toggle {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .toggle-btn {
+            width: 48%;
+            padding: 15px;
+            background-color: transparent;
+            border: 2px solid #fff;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .toggle-btn:hover {
+            background-color: #fff;
+            color: #000;
+            transform: scale(1.1);
+        }
+
+        .toggle-btn.active {
+            background-color: #fff;
+            color: #000;
+            border-color: #fff;
+        }
+
+        .form-section {
+            display: none;
+        }
+
+        .form-section.active {
+            display: block;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label {
+            font-size: 14px;
+            margin-bottom: 6px;
+            text-align: left;
+            margin-left: 15px;
+            color: #fff;
+        }
+
+        form input {
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: transparent;
+            color: #fff;
+            outline: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        form input:focus {
+            border-color: #f2b500;
+        }
+
+        form button {
+            padding: 12px;
+            background-color: #f2b500;
+            color: #fff;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #e09e00;
+            transform: translateY(-2px);
+        }
+
+        .auth-footer {
+            text-align: center;
+            font-size: 14px;
+            color: #fff;
+        }
+
+        .auth-footer a {
+            color: #f2b500;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .auth-footer a:hover {
+            color: #e09e00;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="auth-container">
+        <div class="auth-form">
+            <!-- Toggle Buttons -->
+            <div class="auth-toggle">
+                <button id="login-toggle" class="toggle-btn active" onclick="toggleForm('login')">Login</button>
+                <button id="signup-toggle" class="toggle-btn" onclick="toggleForm('signup')">Sign Up</button>
+            </div>
+
+            <!-- Login Form -->
+            <div id="login-form" class="form-section active">
+                <h2>Login</h2>
+                <form action="/login" method="POST">
+                    <label for="login-username">Username</label>
+                    <input type="text" id="login-username" name="username" required>
+
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" name="password" required>
+
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+
+            <!-- Sign Up Form -->
+            <div id="signup-form" class="form-section">
+                <h2>Sign Up</h2>
+                <form action="/signup" method="POST">
+                    <label for="signup-username">Username</label>
+                    <input type="text" id="signup-username" name="username" required>
+
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" name="email" required>
+
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" name="password" required>
+
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+
+            <div class="auth-footer">
+                <p>Already have an account? <a href="login.html">Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleForm(formType) {
+            // Toggle the active class for the forms
+            if (formType === 'login') {
+                document.getElementById('login-form').classList.add('active');
+                document.getElementById('signup-form').classList.remove('active');
+                document.getElementById('login-toggle').classList.add('active');
+                document.getElementById('signup-toggle').classList.remove('active');
+            } else if (formType === 'signup') {
+                document.getElementById('signup-form').classList.add('active');
+                document.getElementById('login-form').classList.remove('active');
+                document.getElementById('signup-toggle').classList.add('active');
+                document.getElementById('login-toggle').classList.remove('active');
+            }
+        }
+
+        // Set default form view (Login)
+        document.addEventListener('DOMContentLoaded', function() {
+            toggleForm('login');
+        });
+    </script>
+</body>
+</html>
+        
