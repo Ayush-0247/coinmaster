@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trusted AI-based cryptocurrency exchange and aggregator in India.">
+    <meta name="keywords" content="cryptocurrency, AI exchange, crypto aggregator, India, digital currencies">
+    <title>Coinmaster Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+
+
+
+        /* Default (Light Mode) Styles */
+        body {
+            background-color: #a19595; 
+            color: #000000;  
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .cta-button, .cta-learn-more, .login-submit, .social-icon {
+            background-color: #f5c300;
+            color: #000000; 
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .cta-button:hover, .cta-learn-more:hover, .login-submit:hover, .social-icon:hover {
+            background-color: #ffb300; 
+            tab-size: 1cap;
+            text-decoration-color: #4800ff;
+        }
+
+        .hero-section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .logo span {
+            font-size: 60px;
+            color: #f5c300;
+        }
+
+        /* KYC Section Styles */
+        h1 {
+            text-align: center;
+            font-size: 50px;
+            color: #8792b0;
+            margin-top: 50px;
+            font-weight: bold;
+        }
+
+        .container {
+            position: relative;
+            width: 80%;  /* Reduced width for a more controlled layout */
+            max-width: 1000px;
+            margin: 40px auto;  /* Centered on the page */
+            padding: 30px;
+            background-color: white;  /* White background for the container */
+            border-radius: 15px;  /* Rounded corners */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  
+            overflow: hidden;  
+            text-align: center;
+        }
+
+        
+        .image {
+            width: 100%; 
+            max-width: 2000px;  
+            height: auto;  
+            border-radius: 50px;  
+            transition: transform 0.3s ease-in-out;  
+        }
+
+        .image:hover {
+            transform: scale(1.15);  
+        }
+
+        
+        .about-section {
+            background-color: #f5f5f5;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .about-text {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-text h1 {
+            font-size: 36px;
+            color: #2d3a5f;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .about-text ul {
+            list-style-type: none;
+            padding: 0;
+            font-size: 16px;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .about-text li {
+            margin: 10px 0;
+        }
+
+        .cta-learn-more {
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #f5c300;
+            color: black;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-learn-more:hover {
+            background-color: #ffb300;
+        }
+
+        /* Footer Section Styles */
+        footer {
+            background-color: #2d3a5f;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .social-links a:hover {
+            color: #f5c300;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .cta-learn-more {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+
+            .container {
+                width: 90%;  /* Increase container width for smaller screens */
+            }
+
+            .image {
+                max-width: 80%;  /* Ensure the image doesn't stretch too much on mobile */
+            }
+
+            .about-text {
+                padding: 0 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-section {
+                padding: 30px 10px;
+            }
+
+            .image {
+                max-width: 100%;  /* Make image responsive on very small screens */
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        .cta-button, .cta-learn-more, .login-submit, .social-icon {
+            background-color: #f5c300;
+            color: #000000;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        body.dark-mode .cta-button,
+        body.dark-mode .cta-learn-more,
+        body.dark-mode .login-submit,
+        body.dark-mode .social-icon {
+            background-color: #ffb300;
+            color: #000000;
+        }
+
+        .dark-mode-toggle {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+            transition: background-color 0.3s ease;
+        }
+
+        .dark-mode-toggle:hover {
+            background-color: #555;
+        }
+
+        /* Other general styles */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background-color: #2d3a5f;
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        .menu-icon {
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .menu-options {
+            display: none;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            background-color: #2d3a5f;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .menu-options a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+
+        .menu-options a:hover {
+            background-color: #f5c300;
+        }
+
+        .menu-icon:hover + .menu-options {
+            display: block;
+        }
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+<!-- Login / Sign Up Button -->
+<div class="auth-buttons">
+    <a href="login.html" class="auth-btn" target="_blank">Login</a> / 
+    <a href="signup.html" class="auth-btn" target="_blank">Sign Up</a>
+</div>
+
+
+
+
+
+
+
+    <!-- Logo Section -->
+    <div class="logo">
+        <img src="97.png" alt="Coinmaster Logo" class="logo-img">
+        <span>COINMASTERS</span>
+    </div>
+
+
+
+    
+    <main class="hero-section">
+        
+        <div class="text-content">
+            <h1>Unlock the Future of Trading</h1>
+            <h2>Cryptocurrency Exchange and Aggregator</h2>
+            <button id="coming-soon-btn"><span>Coming Soon</span></button>
+            <div id="flash-message" class="flash-message">Don't be impatient!!!</div>
+        </div>
+
+        <div class="image-container">
+            <img src="1001.png" alt="Phone Image" class="img-54">
+            <img src="1002.png" alt="Phone Image">
+        </div>
+
+    </main>
+    
+    
+
+
+
+
+
+    <!-- About Section -->
+    <div class="about-section">
+        <div class="about-text">
+            <h1>About Coinmaster</h1>
+            <p>
+                India’s Innovative Cryptocurrency Exchange and Aggregator Platform, Coinmaster, is poised to revolutionize 
+                how people trade cryptocurrencies in India. Our platform offers advanced features such as:
+            </p>
+            <ul>
+                <li>🌟 <strong>Comprehensive Market Analysis</strong> - Stay informed with real-time data and trends.</li>
+                <li>🔗 <strong>Multiple Trading Pairs</strong> - Access a wide variety of cryptocurrencies for seamless trading.</li>
+                <li>✨ <strong>User-Friendly Interface</strong> - Designed to cater to both beginners and advanced traders.</li>
+                <li>🛡️ <strong>Robust Security Measures</strong> - Advanced encryption and multi-layered protection for your peace of mind.</li>
+                <li>📈 <strong>Real-Time Insights</strong> - Leverage powerful tools for smarter trading decisions.</li>
+            </ul>
+            <button class="cta-learn-more">Learn More</button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- KYC Section -->
+    <h1>Our KYC Process</h1>
+    <div class="container">
+        <img class="image" src="32.png" alt="KYC Image">
+    </div>
+
+
+
+    <h1>Our security standards</h1>
+<div class="container">
+    <img class="image" src="14.png" alt="std Image">
+</div>
+
+
+
+<h1>Our 2 Factor Authentication</h1>
+<div class="container">
+    <img class="image" src="111.png" alt="2 Factor Authentication Image">
+</div>
+
+
+
+
+<section class="team-section">
+    <h1>Meet Our Team</h1>
+    <div class="team-container">
+        <!-- Member 1 -->
+        <div class="team-member">
+            <img src="222.jpg" alt="Member 1" class="team-member-image">
+            <h3>Ayush Raj</h3>
+            <p>Blockchain devloper</p>
+            <p>Project Manager</p>
+
+            <p class="bio">.</p>
+        </div>
+        <!-- Member 2 -->
+        <div class="team-member">
+            <img src="1.jpg" alt="Member 2" class="team-member-image">
+            <h3>Deep Kumar Chaturvedi</h3>
+            <p>Full stack Developer</p>
+            <p class="bio">.</p>
+        </div>
+        <!-- Member 3 -->
+        <div class="team-member">
+            <img src="3.jpg" alt="Member 3" class="team-member-image">
+            <h3>Anant Agarwal</h3>
+            <p>UI/UX Devloper</p>
+            <p class="bio">.</p>
+        </div>
+        
+    </div>
+</section>
+
+
+
+
+
+
+<section class="newsletter-section">
+    <h1>Stay Updated with Coinmaster</h1>
+    <p>Subscribe to our newsletter to receive the latest news and updates about cryptocurrency trading and innovations.</p>
+    <form class="newsletter-form">
+        <input type="email" placeholder="Enter your email address" required>
+        <button type="submit" class="subscribe-button">Subscribe</button>
+    </form>
+</section>
+
+
+
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="social-links">
+                <a href="https://twitter.com/coinmaster" class="social-icon" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-twitter"></i> Twitter
+                </a>
+                <a href="https://facebook.com/coinmaster" class="social-icon" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-facebook"></i> Facebook
+                </a>
+                <a href="https://linkedin.com/coinmaster" class="social-icon" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+            <p>&copy; 2024 Coinmaster. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</body>
+</html>
+
+
